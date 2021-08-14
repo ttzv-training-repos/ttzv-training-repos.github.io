@@ -40,11 +40,13 @@
                                             <i class="fas fa-minus"></i>
                                         </button>
                                     </div>
-                                    <div class="col-8"></div>
+                                    <div class="col-8 mt-1">
+                                        <a (click)="removeItemFromCart(cartItem)" class="btn btn-primary">Remove</a>
+
+                                    </div>
                                 </div>
                             </div>
                             <p>Sub-total {{cartItem.quantity * cartItem.unitPrice | currency:'USD'}}</p>
-                            <a (click)="removeItemFromCart(cartItem)" class="btn btn-info">Remove</a>
                         </td>
                     </tr>
                     
@@ -53,8 +55,8 @@
                         <td><b>Total Quantity: {{ totalQuantity }}</b>
                             <p>Shipping FREE</p>
                             <b>Total Price: {{totalPrice | currency:'USD'}}</b><br>
-                            <a href="checkout-page.html" class="primary-btn">Checkout</a>
                         </td>
+                        <a routerLink="/checkout" class="btn btn-primary">Checkout</a>
                     </tr>
 
                 </table>
