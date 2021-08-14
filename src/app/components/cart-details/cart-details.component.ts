@@ -44,7 +44,18 @@ export class CartDetailsComponent implements OnInit {
 
   removeItemFromCart(cartItem: CartItem){
     this.cartService.removeFromCart(cartItem);
-    this.cartItems = this.cartService.cartItems;
+  }
+
+  incrementQuantity(cartItem: CartItem){
+    this.cartService.addToCart(cartItem);
+  }
+
+  decrementQuantity(cartItem: CartItem){
+    cartItem.quantity -= 1;
+    if(cartItem.quantity === 0){
+      this.cartService.removeFromCart(cartItem);
+    }
+    this.cartService.computeCartTotals();
   }
 
 }

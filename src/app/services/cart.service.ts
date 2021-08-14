@@ -26,9 +26,11 @@ export class CartService {
   }
 
   removeFromCart(cartItem: CartItem){
-    this.cartItems = this.cartItems.filter(item => item.id != cartItem.id);
-
-    this.computeCartTotals();
+    let index = this.cartItems.findIndex(item => item.id == cartItem.id);
+    if(index >= 0){
+      this.cartItems.splice(index, 1)
+      this.computeCartTotals();
+    }
   }
 
   computeCartTotals() {
