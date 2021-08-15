@@ -4,13 +4,16 @@ import { Observable } from 'rxjs';
 import { Product } from '../products/product';
 import { map } from "rxjs/operators";
 import { ProductCategory } from '../products/product-category';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private baseUrl = 'http://localhost:8080/api/products';
+  private endpoint = environment.shopApiUrl;
+
+  private baseUrl = this.endpoint + '/products';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -47,7 +50,7 @@ export class ProductService {
   }
 
   getProductCategories(): Observable<ProductCategory[]> {
-    const url = 'http://localhost:8080/api/product-category';
+    const url = this.endpoint + '/product-category';
 
     return this.httpClient.get<GetResponseProductCategory>(url).pipe(
       map(response => response._embedded.productCategory)
