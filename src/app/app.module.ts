@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SalesPersonListComponent } from './sales-person-list/sales-person-list.component';
-import { ProductListComponent } from './products/product-list/product-list.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { Routes, RouterModule, Router } from '@angular/router';
@@ -61,7 +60,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SalesPersonListComponent,
     ProductListComponent,
     ProductCategoryMenuComponent,
     SearchComponent,

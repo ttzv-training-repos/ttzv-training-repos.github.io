@@ -3,12 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { CartItem } from 'src/app/commons/cart-item';
 import { CartService } from 'src/app/services/cart.service';
 import { GetResponseProduct, ProductService } from 'src/app/services/product.service';
-import { Product } from '../product';
+import { Product } from 'src/app/commons/product';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.sass']
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
 

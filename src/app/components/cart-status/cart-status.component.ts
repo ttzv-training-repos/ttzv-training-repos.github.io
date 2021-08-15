@@ -4,7 +4,7 @@ import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-cart-status',
   templateUrl: './cart-status.component.html',
-  styleUrls: ['./cart-status.component.sass']
+  styleUrls: ['./cart-status.component.css']
 })
 export class CartStatusComponent implements OnInit {
 

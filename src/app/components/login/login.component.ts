@@ -6,7 +6,7 @@ import * as OktaSignIn from '@okta/okta-signin-widget'; //need to create src/okt
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 

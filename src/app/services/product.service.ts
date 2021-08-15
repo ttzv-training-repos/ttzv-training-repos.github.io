@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs';
-import { Product } from '../products/product';
+import { Product } from '../commons/product';
 import { map } from "rxjs/operators";
-import { ProductCategory } from '../products/product-category';
+import { ProductCategory } from '../commons/product-category';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

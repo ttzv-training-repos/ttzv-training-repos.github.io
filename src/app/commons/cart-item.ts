@@ -1,4 +1,4 @@
-import { Product } from "../products/product";
+import { Product } from "../commons/product";
 
 export class CartItem {
     id: number = 0;
