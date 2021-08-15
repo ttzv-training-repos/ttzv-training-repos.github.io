@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  shopApiUrl: 'https://ecommerce-demo-springboot.herokuapp.com/api'
+  shopApiUrl: 'https://ecommerce-demo-springboot.herokuapp.com/api',
+  oktaBaseUri: 'http://localhost:4201'
 };
 
 /*
