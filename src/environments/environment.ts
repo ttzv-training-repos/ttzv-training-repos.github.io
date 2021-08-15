@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  shopApiUrl: 'http://localhost:8080/api'
+  shopApiUrl: 'https://ecommerce-demo-springboot.herokuapp.com/api'
 };
 
 /*

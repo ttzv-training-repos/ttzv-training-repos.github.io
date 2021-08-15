@@ -14,7 +14,7 @@ export class ShopFormService {
   private endpoint = environment.shopApiUrl;
 
   countryUrl: string= this.endpoint + "/countries";
-  stateUrl: string= this.endpoint = "/states";
+  stateUrl: string= this.endpoint + "/states";
 
   constructor(private httpClient: HttpClient) { }
 

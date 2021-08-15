@@ -15,6 +15,13 @@
     background:#205b8d
 }
 
+@media (max-width:1377px) {
+    .security-btn {
+        min-width:auto;
+        max-height: 3em;
+    }
+}
+
 /*
     Copy from styles.css -> .form-header
     Rename as .login-status-header

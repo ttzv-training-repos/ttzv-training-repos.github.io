@@ -64,10 +64,13 @@ export class ProductListComponent implements OnInit {
     if (hasCategoryId){
       this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
     } else {
-      this.currentCategoryId = 1;
+      this.currentCategoryId = 5;
     }
     this.productService.getProductCategories().subscribe(
-      data => this.categoryName = data[this.currentCategoryId-1].categoryName
+      data => {
+        this.categoryName = data[this.currentCategoryId].categoryName;
+        console.log(data)
+      }
     )
 
     if(this.previousCategoryId != this.currentCategoryId){
