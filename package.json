@@ -2,8 +2,9 @@
   "name": "angular-sandbox",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -23,6 +24,7 @@
     "@okta/okta-angular": "^3.2.2",
     "@okta/okta-signin-widget": "^5.9.4",
     "bootstrap": "^5.1.0",
+    "express": "^4.17.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
